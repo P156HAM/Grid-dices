@@ -1,9 +1,84 @@
-
-aside{
-    width: 100px;
-    height: 100px;
-    border: #000;
-    border-radius: 5em;
-    background-color: #000;   
+*{
+    box-sizing: border-box;
 }
 
+
+.wrapper{
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.dice aside{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #000;
+}
+
+.dice.dots-1 aside:nth-child(1){
+    grid-area: 3 / 3 ;
+}
+
+.dice.dots-1 aside:nth-child(2), .dice.dots-1 aside:nth-child(3)
+, .dice.dots-1 aside:nth-child(4), .dice.dots-1 aside:nth-child(5)
+, .dice.dots-1 aside:nth-child(6) {
+    display: none;
+}
+
+.dice.dots-2 aside:nth-child(1){
+    grid-area: 2 / 2;
+}
+.dice.dots-2 aside:nth-child(2){
+    grid-area: -3 / -3;
+}
+
+.dice.dots-2 aside:nth-child(3)
+, .dice.dots-2 aside:nth-child(4), .dice.dots-2 aside:nth-child(5)
+, .dice.dots-2 aside:nth-child(6) {
+    display: none;
+}
+
+.dice.dots-3 aside:nth-child(1){
+    grid-area: 2 / 2;
+}
+.dice.dots-3 aside:nth-child(2){
+    grid-area: -3 / -3;
+}
+.dice.dots-3 aside:nth-child(3){
+    grid-area: 3 / 3;
+}
+
+.dice.dots-3 aside:nth-child(4), .dice.dots-3 aside:nth-child(5),
+.dice.dots-3 aside:nth-child(6) {
+    display: none;
+}
+
+.dice.dots-4 aside:nth-child(1){
+    grid-area: 2 / 2;
+}
+.dice.dots-4 aside:nth-child(2){
+    grid-area: -3 / -3;
+}
+.dice.dots-4 aside:nth-child(3){
+    grid-area: 4 / 2;
+}
+.dice.dots-4 aside:nth-child(4){
+    grid-area: 2 / 4;
+}
+
+.dice.dots-4 aside:nth-child(5),
+.dice.dots-4 aside:nth-child(6) {
+    display: none;
+}
